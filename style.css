@@ -59,3 +59,16 @@ li { margin: 4px 0; }
   margin: 16px 0;
 }
 footer { max-width: 720px; margin: 0 auto 40px; padding: 0 16px; color: var(--ink-2); font-size: 14px; }
+
+/* Reviewer guide: step screenshots with a highlight box */
+.step { display: grid; grid-template-columns: 220px 1fr; gap: 20px; align-items: start; margin: 24px 0; }
+@media (max-width: 560px) { .step { grid-template-columns: 1fr; } .step figure { max-width: 240px; } }
+.step figure { margin: 0; position: relative; border-radius: 22px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+.step img { display: block; width: 100%; height: auto; }
+.step .hl { position: absolute; border: 3px solid #f4c430; border-radius: 10px; box-shadow: 0 0 0 9999px rgba(0,0,0,0.18); }
+.step h3 { margin-top: 0; }
+.num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: var(--brand); color: var(--card); font-weight: 800; margin-right: 8px; font-size: 15px; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; margin: 16px 0; }
+.gallery figure { margin: 0; }
+.gallery img { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line); display: block; }
+.gallery figcaption { font-size: 14px; color: var(--ink-2); margin-top: 6px; text-align: center; }
