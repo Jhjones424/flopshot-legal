@@ -17,9 +17,9 @@
   </nav>
   <main>
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective October 23, 2026</p>
+    <p class="meta">Effective October 28, 2026</p>
 
-    <p>This policy explains what the FlopShot app (“FlopShot”, “we”) collects, why, who can see it, and how you can delete it. The short version: we collect what the app needs to keep score, sync your rounds and let you play with friends. We don’t sell your data, show ads, or track you across other apps or websites.</p>
+    <p>This policy explains what the FlopShot app (“FlopShot”, “we”) collects, why, who can see it, and how you can delete it. The short version: we collect what the app needs to keep score, sync your rounds and let you play with friends. Your location never leaves your phone. We don’t sell your data, show ads, or track you across other apps or websites.</p>
 
     <h2>Using FlopShot without an account</h2>
     <p>Keeping score works without signing in. Your rounds, players and settings then stay on your phone only, and we receive none of it.</p>
@@ -42,25 +42,33 @@
       <li>Rounds: the course and tees, the players, scores, and any putts, fairways and greens you choose to track.</li>
       <li>The games you play, what each player won or lost, and the payments you mark as paid.</li>
       <li>Your Predictions picks for a round. Other players can’t see them until the round ends.</li>
+      <li>Fixes to a finished round: who changed which score, from what to what, and when.</li>
+      <li>Rounds you’re invited to watch or choose to watch, and the picks you make as a spectator.</li>
       <li>Players you add who don’t have an account (“guests”), with the name and optional Venmo username you type for them. Please only add details your friends are happy for you to add.</li>
       <li>Courses you search for or add. To find a course, our server sends the search words (never your personal details) to our course-data provider.</li>
     </ul>
     <h3>Friends and the Feed</h3>
     <ul>
       <li>Your friends, friend requests, round invitations and the accounts you block.</li>
-      <li>Quips and replies you post on the Feed, and your reactions.</li>
+      <li>Quips and replies you post on the Feed, including a line you post as you tee off, and your reactions.</li>
       <li>Reports you make about a quip or reply, with the reason you give and a copy of what you reported.</li>
     </ul>
+    <h3>Notifications (if you allow them)</h3>
+    <p>A push token that Apple gives your phone for FlopShot, so we can send round invites and friend requests, and your choices in <strong>Settings › Notifications</strong>. Pushes name who it’s from and the course, never money. Signing out stops pushes to that phone.</p>
     <h3>Support</h3>
     <p>Anything you send us when you ask for help.</p>
 
+    <h3 id="location">Your location (yardages)</h3>
+    <p>If you allow it, FlopShot uses your iPhone’s location to show the distance to the green and your spot on the Hole Map. It is used on your phone only, while a hole is on screen, and is <strong>never saved, sent to us or shared</strong>. You can say no, or turn off <strong>Settings › During a round › Show yardages</strong>; keeping score works the same either way. The hole maps themselves are course data (see OpenStreetMap below), not anything about you.</p>
+
     <h3>What we don’t collect</h3>
-    <p>We don’t collect your location, contacts, photos, advertising identifier or browsing activity. FlopShot has no ads and no third-party analytics or tracking. If you’ve allowed it in your iPhone’s settings, Apple may share crash reports and usage statistics with us; those don’t identify you.</p>
+    <p>We don’t collect your location (it stays on your phone, as above), contacts, photos, advertising identifier or browsing activity. FlopShot has no ads and no third-party analytics or tracking. If you’ve allowed it in your iPhone’s settings, Apple may share crash reports and usage statistics with us; those don’t identify you.</p>
 
     <h2>How we use it</h2>
     <ul>
       <li>To run the app: keep score, back up and sync your rounds between phones, and work out the money.</li>
       <li>To show your rounds and posts to the people you choose (see below).</li>
+      <li>To send the notifications you allow.</li>
       <li>To keep the Feed safe: we block slurs and other banned words, and we review reports to remove content or suspend accounts that break the <a href="terms.html#community">community rules</a>.</li>
       <li>To answer you when you contact us, and to fix problems.</li>
     </ul>
@@ -68,9 +76,10 @@
 
     <h2>Who can see what</h2>
     <ul>
-      <li><strong>Players in a round</strong> see that round in full, including the money.</li>
-      <li><strong>Your friends</strong> can see your rounds’ scores and results if you allow it (Settings › Privacy › Who sees your rounds). Friends who weren’t in a round never see its money.</li>
-      <li><strong>The Feed:</strong> a round you post, and your quips and replies, are shown to friends of the people who posted that round. The Feed never shows money.</li>
+      <li><strong>Players in a round</strong> see that round in full, including the money and who fixed which score after it finished.</li>
+      <li><strong>Your friends</strong> can see your rounds’ scores and results if you allow it (Settings › Privacy › Who sees your rounds), and a finished round’s Predictions picks and points. Friends who weren’t in a round never see its money.</li>
+      <li><strong>Spectators:</strong> friends a player invites to watch, and friends who join from a tee-off post, see the round’s players and scores live, never its money. Spectators’ picks, like players’ picks, stay hidden until the round finishes; then everyone in the round and its spectators can see them.</li>
+      <li><strong>The Feed:</strong> a round you post, and your quips and replies, are shown to friends of the people who posted that round. If you post as you tee off, they see the round while it’s being played (the players and how many holes are done, with no leader), and can open it to follow along. The Feed never shows money. Anyone who can see a post can see who reacted to it.</li>
       <li><strong>Your @handle and display name</strong> can be found by other signed-in users so they can add you as a friend or invite you. You choose who can invite you.</li>
       <li><strong>Your Venmo username</strong> is shown to people you play with, and to friends who add you to a round, so they can pay you.</li>
       <li>Someone you block can’t see your posts, and you can’t see theirs.</li>
@@ -81,7 +90,9 @@
     <ul>
       <li><strong>Supabase</strong>: our database, sign-in and server functions. Your account and synced data are stored with Supabase.</li>
       <li><strong>Apple and Google</strong>: sign-in. Their own privacy policies apply to your Apple or Google account.</li>
+      <li><strong>Apple</strong> also delivers push notifications, and provides the satellite pictures on the Hole Map (Apple Maps).</li>
       <li><strong>GolfCourseAPI</strong>: course data. It receives course search words only.</li>
+      <li><strong>OpenStreetMap</strong>: hole maps (greens, tees, bunkers and water). Our server asks OpenStreetMap’s map servers, and a copy run by OpenStreetMap France, about a course (its name and location). They never receive anything about you. Map data © OpenStreetMap contributors.</li>
       <li><strong>Resend</strong>: sends us an email when someone reports a quip or reply, containing the reported text and the accounts involved.</li>
     </ul>
     <p>When you tap a Venmo link, the Venmo app or website opens. FlopShot never sees or handles the payment, and Venmo’s own privacy policy applies.</p>
@@ -100,6 +111,8 @@
     <ul>
       <li>your profile, handle, handicap index and Venmo username;</li>
       <li>your friendships, invitations and blocks;</li>
+      <li>the rounds you watched and your spectator picks;</li>
+      <li>your push tokens and notification choices;</li>
       <li>your Feed quips, replies and reactions;</li>
       <li>rounds that nobody else with an account was in.</li>
     </ul>
@@ -109,6 +122,8 @@
     <h2>Your choices</h2>
     <ul>
       <li>Edit your profile and privacy choices in Profile and Settings.</li>
+      <li>Turn notifications on or off in <strong>Settings › Notifications</strong> (or in your iPhone’s Settings), and location in your iPhone’s Settings or with <strong>Settings › During a round › Show yardages</strong>.</li>
+      <li>Stop watching a round from its menu; decline an invitation to watch with <strong>×</strong>.</li>
       <li>Download your rounds as a spreadsheet file: <strong>Settings › Your data › Export my rounds</strong>.</li>
       <li>Delete a quip or reply you posted, block someone, or report something from the <strong>…</strong> button next to it.</li>
       <li>Ask us for a copy of your data, or for help deleting it, at <a href="mailto:flopshot.support@gmail.com">flopshot.support@gmail.com</a>.</li>
