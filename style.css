@@ -72,3 +72,6 @@ footer { max-width: 720px; margin: 0 auto 40px; padding: 0 16px; color: var(--in
 .gallery figure { margin: 0; }
 .gallery img { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line); display: block; }
 .gallery figcaption { font-size: 14px; color: var(--ink-2); margin-top: 6px; text-align: center; }
+
+/* Add page: the "Open in FlopShot" button */
+a.button { display: inline-block; background: var(--brand); color: var(--card); font-weight: 700; text-decoration: none; padding: 12px 20px; border-radius: 12px; min-height: 44px; }

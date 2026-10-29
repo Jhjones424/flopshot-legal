@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Add a friend on FlopShot</title>
+  <meta name="description" content="A friend wants to add you on FlopShot.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><div class="wrap"><a class="home" href="./">FlopShot</a><p>Talk is cheap. Missed putts aren’t.</p></div></header>
+  <nav>
+    <a href="./">Home</a>
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+  <main>
+    <!-- The app opens this link itself when it's installed (a universal link). This page is for everyone else. -->
+    <h1 id="title">Add a friend on FlopShot</h1>
+    <p class="meta">Golf scores, games and money for your regular group.</p>
+
+    <h2>Have FlopShot?</h2>
+    <p><a class="button" id="open" href="flopshot-beta://add">Open in FlopShot</a></p>
+    <p>FlopShot shows who it is and asks before sending a friend request.</p>
+
+    <h2>Don’t have it yet?</h2>
+    <ol>
+      <li><a href="https://testflight.apple.com/join/e5r6QS9n">Join the beta on TestFlight</a> from your iPhone. TestFlight is Apple’s free app for trying apps before they’re in the App Store.</li>
+      <li>Open FlopShot and sign in with Apple or Google.</li>
+      <li>Come back to this page and tap <strong>Open in FlopShot</strong>.</li>
+    </ol>
+    <p id="manual"></p>
+  </main>
+  <footer>FlopShot · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></footer>
+  <script>
+    // add?u=<handle>: show the handle and pass it to the app. Handles are 3 to 20 of a-z, 0-9 and _; anything else is ignored.
+    var handle = (new URLSearchParams(location.search).get("u") || "").replace(/^@/, "").toLowerCase();
+    if (/^[a-z0-9_]{3,20}$/.test(handle)) {
+      document.getElementById("title").textContent = "Add @" + handle + " on FlopShot";
+      document.getElementById("open").href = "flopshot-beta://add?u=" + handle;
+      document.getElementById("manual").textContent =
+        "Or add them by hand: Profile › People › Find a friend, then type " + handle + ".";
+    }
+  </script>
+</body>
+</html>
